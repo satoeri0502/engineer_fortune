@@ -1,0 +1,21 @@
+<div class="card shadow-sm mt-4">
+  <div class="card-body text-center">
+    <h2 class="mb-3">🎲 今日のエンジニア運勢 🎲</h2>
+    <p class="animate__animated animate__bounceInDown" style="animation-delay: 0s;"><strong>エラー率:</strong> <span class="text-danger"><%= @fortune.error_rate %></span></p>
+    <p class="animate__animated animate__bounceInDown" style="animation-delay: 0.3s;"><strong>バグ運:</strong> <span class="text-primary"><%= @fortune.bug_fortune %></span></p>
+    <p class="animate__animated animate__bounceInDown" style="animation-delay: 0.6s;"><strong>コミットパワー:</strong> <span class="text-success"><%= @fortune.commit_power %></span></p>
+  </div>
+</div>
+
+<%= button_to fortunes_path, method: :post, class: "btn btn-primary btn-lg mt-4" do %>
+  <i class="fas fa-sync-alt"></i> もう一回引く！
+<% end %>
+
+<!-- Twitterシェア -->
+<%= link_to "https://twitter.com/intent/tweet?text=
+  【エンジニアみくじの結果】%0a
+  エラー率 : #{@fortune.error_rate}%0a%0a
+  ↓↓【エンジニアみくじ】サイトで他の結果を見る↓↓%0a
+  &url=#{request.original_url}", class: "btn btn-info btn-lg mt-3", target: "_blank" do %>
+  <i class="fab fa-twitter mr-1" style='color: #FFFFFF;'></i>Twitterでシェア
+<% end %>
