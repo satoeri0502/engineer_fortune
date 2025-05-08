@@ -16,9 +16,10 @@
         <!-- Twitterシェア -->
         <%= link_to "https://twitter.com/intent/tweet?text=
 【エンジニアみくじの結果】%0a
-  エラー率 : #{@fortune.error_rate}%0a%0a
-    ↓↓サイトで他の結果を見る↓↓%0a
-    &url=#{request.base_url}", class: "btn btn-info btn-lg mt-3", target: "_blank" do %>
+  エラー率 : #{@fortune.error_rate}%0a
+  バグ運 : #{@fortune.bug_fortune}%0a
+  コミットパワー : #{@fortune.commit_power}%0a%0a
+  &url=#{request.base_url}", class: "btn btn-info btn-lg mt-3", target: "_blank" do %>
           <i class="fab fa-twitter mr-1" style='color: #FFFFFF;'></i>Twitterでシェア
         <% end %>
       </div>
