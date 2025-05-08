@@ -2,4 +2,4 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
-import '../assets/stylesheets/basestyle.css'
+import './stylesheets/basestyle.css'
