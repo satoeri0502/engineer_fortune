@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root "fortunes#index"
 
-  resources :fortunes, only: [:create, :show]
+  resources :fortunes, only: [:create]
 end

@@ -1,5 +1,9 @@
-<div class="card shadow-sm mt-4">
-  <div class="card-body text-center">
-    <h2 class="mb-3">🎲 エンジニアみくじ 🎲</h2>
-    <%= button_to "今日の運勢を占う…", fortunes_path, class: "btn btn-primary btn-lg mt-4" %>
-</div>
+<h1>エンジニアみくじ</h1>
+
+<%= button_to "今日の運勢を占う！", fortunes_path, method: :post, form: {data: {turbo_frame: "fortune_result"}}, class: "btn btn-primary" %>
+
+<%= turbo_frame_tag "fortune_result" do %>
+  <% if @fortune %>
+    <%= render partial: "fortune", locals: { fortune: @fortune } %>
+  <% end %>
+<% end %>

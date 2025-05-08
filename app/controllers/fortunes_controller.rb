@@ -1,5 +1,6 @@
 class FortunesController < ApplicationController
   def index
+    @fortune = nil
   end
 
   def create
@@ -27,10 +28,6 @@ class FortunesController < ApplicationController
       ].sample
     )
 
-    redirect_to fortune_path(@fortune)
-  end
-
-  def show
-    @fortune = Fortune.find(params[:id])  # URLのIDから結果を取得
+    render 'index'
   end
 end
