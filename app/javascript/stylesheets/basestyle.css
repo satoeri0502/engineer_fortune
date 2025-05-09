@@ -5,6 +5,6 @@ body {
 }
 
 .card {
-  margin: auto;
-  width: 70%;
+  margin: auto !important;
+  width: 70% !important;
 }
