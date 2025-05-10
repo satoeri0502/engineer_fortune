@@ -1,10 +1,10 @@
 body {
-  background-color: #F6DFEC !important;
-  font-family: "Kaisei HarunoUmi", serif !important;
-  margin-top: 5% !important;
+  background-color: #F6DFEC;
+  font-family: "Kaisei HarunoUmi", serif;
+  margin-top: 5%;
 }
 
 .card {
-  margin: auto !important;
-  width: 70% !important;
+  margin: auto;
+  width: 70%;
 }
