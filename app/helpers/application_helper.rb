@@ -9,9 +9,10 @@ module ApplicationHelper
       keywords: 'エンジニア,おみくじ,くじ,診断メーカー',
       canonical: request.original_url,
       separator: '|',
-      icon: {
-        href: image_url('icon.png')
-      },
+      icon: [
+        { href: image_url('icon.png') },
+        { href: image_url('icon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' },
+      ],
       og:{
         site_name: :site,
         title: :title,
